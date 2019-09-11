@@ -1,12 +1,24 @@
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/11 15:04:11 by cwheatgr          #+#    #+#             */
+/*   Updated: 2019/09/11 15:04:31 by cwheatgr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char    *ft_strcpy(char *dest, const char *src)
+#include "libft.h"
+
+char	*ft_strcpy(char *dest, const char *src)
 {
-    int i;
+	int i;
 
-    i = -1;
-    while (src[++i])
-        dest[i] = src[i];
-    dest[i] = '\0';
-    return (dest);
+	i = -1;
+	while (src[++i])
+		dest[i] = src[i];
+	dest[i] = '\0';
+	return (dest);
 }

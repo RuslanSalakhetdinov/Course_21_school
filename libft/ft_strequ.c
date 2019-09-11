@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/11 15:06:54 by cwheatgr          #+#    #+#             */
+/*   Updated: 2019/09/11 15:07:58 by cwheatgr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int     ft_strequ(char const *s1, char const *s2)
+int		ft_strequ(char const *s1, char const *s2)
 {
-    if (ft_strcmp((char*)s1, (char*)s2) == 0)
-        return (0);
-    return (1);
+	if (ft_strcmp((char*)s1, (char*)s2) == 0)
+		return (0);
+	return (1);
 }

@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 15:02:06 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/11 15:02:09 by cwheatgr         ###   ########.fr       */
+/*   Created: 2019/09/05 17:22:46 by cwheatgr          #+#    #+#             */
+/*   Updated: 2019/09/05 17:39:32 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+void	ft_bzero(void *s, size_t n)
 {
-	if ((*ap))
+	unsigned char *buf;
+
+	if (n > 0)
 	{
-		free((*ap));
-		*(*ap) = NULL;
+		buf = (unsigned char*)s;
+		while (n--)
+			*buf++ = 0;
 	}
 }
