@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 15:02:06 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/11 15:02:09 by cwheatgr         ###   ########.fr       */
+/*   Created: 2019/09/05 17:39:41 by cwheatgr          #+#    #+#             */
+/*   Updated: 2019/09/06 15:39:51 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-void	ft_memdel(void **ap)
+void					*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	if ((*ap))
-	{
-		free((*ap));
-		*(*ap) = NULL;
-	}
+	const unsigned char	*buf_src;
+	unsigned char		*buf_dst;
+
+	buf_src = (const unsigned char*)src;
+	buf_dst = (unsigned char*)dst;
+	while (n--)
+		*buf_dst++ = *buf_src++;
+	return (dst);
 }
