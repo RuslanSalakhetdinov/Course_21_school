@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/13 12:37:18 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/13 12:37:21 by cwheatgr         ###   ########.fr       */
+/*   Created: 2019/09/13 14:43:27 by cwheatgr          #+#    #+#             */
+/*   Updated: 2019/09/13 14:51:48 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strstr(const char *haystack, const char *needle);
+void	ft_lstdel(t_list **alst, void (*del) (void *, size_t))
 {
-	int i;
-	int j;
+	t_list *nlst;
+	t_list *plst;
 
-	if (!needle)
-		return (haystack);
-	i = -1;
-	while (haystack[++i])
+	plst = *alst;
+	while (plst)
 	{
-		j = -1;
-		while (neddle[++j] == haystack[i + j])
-			if (!needle[j + 1])
-				return (haystack + i);
+		nlst = plist->next;
+		ft_lstdelone(&plist, (*del));
+		plst = nlst;
 	}
-	return (NULL);
+	*alst = NULL;
 }

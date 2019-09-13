@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 16:41:26 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/11 16:43:54 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/13 16:55:53 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,18 @@ static void	ft_count_words(int *count, char *c)
 	}
 }
 
-static char	*ft_len_word(int *len, char *str)
+static void	*ft_del_arr(char **arr, int index)
 {
+	int i;
 
+	i = -1;
+	while (++i < index)
+		free(arr[i]);
+}
+
+static char	*ft_len_word(char *str, int *len)
+{
+	
 }
 
 char		**ft_strsplit(char const *s, char c)
