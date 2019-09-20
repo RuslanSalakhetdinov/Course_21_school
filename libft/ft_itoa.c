@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 19:36:08 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/20 19:36:12 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/20 19:57:39 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,32 +28,33 @@ static char	*if_min_int(char *str)
 	return (str);
 }
 
-void	ft_algo_play(int *suff, char **buf)
+static void	ft_algo_play(int *suff, char **buf)
 {
-	int i;
+	int		i;
 
-	*suff = 1;
+	i = 12;
+	(*suff) = 1;
 	if (n < 0)
 	{
-		*suff = -1;
+		(*suff) = -1;
 		n = n * (*suff);
 	}
 	while (n / 10)
 	{
-		buf[--i] = '0' + n % 10;
+		(*buf)[--i] = '0' + n % 10;
 		n = n / 10;
 	}
 	(*buf)[--i] = '0' + n;
-	if (*suff == -1)
+	if ((*suff) == -1)
 		(*buf)[--i] = '-';
 	(*buf) = &(*buf)[i];
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	char *buf;
-	int i;
-	int suff;
+	char	*buf;
+	int		i;
+	int		suff;
 
 	buf = (char*)malloc(12 * sizeof(buf));
 	if (buf)
@@ -66,6 +67,6 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (n == -2147483648)
 		return (if_min_int(buf));
-	ft_algo_paly(&suff, &buf);
+	ft_algo_play(&suff, &buf);
 	return (buf);
 }
