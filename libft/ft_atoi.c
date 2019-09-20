@@ -1,36 +1,26 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/05 11:42:16 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/08/06 18:16:51 by cwheatgr         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "libft.h"
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *nptr)
 {
 	int nb;
 	int suff;
 
 	nb = 0;
 	suff = 1;
-	while (*str == '\0' || *str == '\n' || *str == '\t' || *str == '\v'
-			|| *str == '\f' || *str == '\r' || *str == ' ')
-		str++;
-	if (*str == '-')
+	while (*nptr == '\0' || *nptr == '\n' || *nptr == '\t' || *nptr == '\v' \
+			|| *nptr == '\f' || *nptr == '\r' || *nptr == ' ')
+		nptr++;
+	if (*nptr == '-')
 	{
-		str += 1;
+		nptr += 1;
 		suff *= -1;
 	}
-	if (*str == '+')
-		str += 1;
-	while (*str != '\0' && *str >= '0' && *str <= '9')
+	if (*nptr == '+')
+		nptr += 1;
+	while (*nptr != '\0' && *nptr >= '0' && *nptr <= '9')
 	{
-		nb = (*str - '0') + 10 * nb;
-		str += 1;
+		nb = (*nptr - '0') + 10 * nb;
+		nptr += 1;
 	}
 	return (nb *= suff);
 }
