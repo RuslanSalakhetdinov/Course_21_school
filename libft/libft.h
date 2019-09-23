@@ -6,13 +6,15 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:22:30 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/20 20:24:57 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/23 23:26:17 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define MAX(x, y) ((x) > (y)) ? x : y
 
+# include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
 # include <strings.h>

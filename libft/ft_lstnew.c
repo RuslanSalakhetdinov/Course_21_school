@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 14:05:34 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/20 20:02:26 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/23 23:00:24 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	list = (t_list*)malloc(sizeof(t_list));
 	if (!list)
 		return (NULL);
-	list->content = content;
+	list->content = (void *)content;
 	if (!content)
 		list->content_size = 0;
 	else
 		list->content_size = content_size;
 	list->next = NULL;
+	return (list);
 }

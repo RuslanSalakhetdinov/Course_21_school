@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 17:47:14 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/23 19:08:28 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/23 23:55:57 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,16 +71,18 @@ static void	ft_set_word(char **arr, char **s, char c, int index)
 char		**ft_strsplit(char const *s, char c)
 {
 	char	**arr;
+	char	*buf;
 	int		count;
 	int		index;
 
 	count = 0;
-	ft_count(&(char*)*s, c, &count);
+	ft_count((char *)s, c, &count);
 	arr = (char**)malloc(sizeof(*arr) * (count + 1));
 	index = -1;
+	buf = (char *)s;
 	while (++index < count)
 	{
-		ft_set_word(arr, &s, c, index);
+		ft_set_word(arr, &buf, c, index);
 		if (!arr)
 			return (NULL);
 	}

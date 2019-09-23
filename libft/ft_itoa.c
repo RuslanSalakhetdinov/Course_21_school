@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 19:36:08 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/20 19:57:39 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/23 20:27:52 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static char	*if_min_int(char *str)
 	return (str);
 }
 
-static void	ft_algo_play(int *suff, char **buf)
+static void	ft_algo_play(int *suff, char **buf, int n)
 {
 	int		i;
 
@@ -67,6 +67,6 @@ char		*ft_itoa(int n)
 		return (NULL);
 	if (n == -2147483648)
 		return (if_min_int(buf));
-	ft_algo_play(&suff, &buf);
+	ft_algo_play(&suff, &buf, n);
 	return (buf);
 }

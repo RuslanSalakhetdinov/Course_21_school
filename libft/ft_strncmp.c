@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 12:35:15 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/20 20:16:03 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/23 23:36:58 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = -1;
 	while (++i < n && *s1)
-		if (ft_memcmp(&s1[i], &s2[i]))
-			return (ft_memcmp(&s1[i], &s2[i]));
+		if (ft_memcmp(&s1[i], &s2[i], 1))
+			return (ft_memcmp(&s1[i], &s2[i], 1));
 	return (0);
 }

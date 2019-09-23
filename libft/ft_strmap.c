@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 15:19:27 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/11 16:31:42 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/23 23:34:43 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ char		*ft_strmap(char const *s, char (*f) (char))
 		return (NULL);
 	i = 0;
 	while (s[i])
-		buf[i] = (*f)(s[i++]);
+	{
+		buf[i] = (*f)(s[i]);
+		i++;
+	}
 	return (buf);
 }
