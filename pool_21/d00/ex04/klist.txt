@@ -1,0 +1,5 @@
+Credentials cache: API:10904
+        Principal: cwheatgr@21-SCHOOL.RU
+
+  Issued                Expires               Principal
+Jul 30 10:00:24 2019  Jul 31 10:00:24 2019  krbtgt/21-SCHOOL.RU@21-SCHOOL.RU
