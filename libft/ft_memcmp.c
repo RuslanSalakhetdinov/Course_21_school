@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 15:01:41 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/23 23:23:32 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 18:46:39 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int						ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	b1 = (const unsigned char *)s1;
 	b2 = (const unsigned char *)s2;
-
 	while (--n)
 	{
 		if (*b1 != *b2)

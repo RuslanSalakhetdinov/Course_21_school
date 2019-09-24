@@ -6,13 +6,13 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:29:00 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/23 23:47:22 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 19:39:06 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int *c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char *buf;
 

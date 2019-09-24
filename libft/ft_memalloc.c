@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 15:00:51 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/11 15:00:58 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 18:46:07 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void				*ft_memalloc(size_t size)
 	unsigned char	*area;
 
 	area = (unsigned char*)malloc(sizeof(*area) * size);
-	if(!area)
+	if (!area)
 		return (NULL);
 	while (size)
 		area[--size] = 0;

@@ -6,7 +6,7 @@
 #    By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 20:25:24 by cwheatgr          #+#    #+#              #
-#    Updated: 2019/09/23 22:25:04 by cwheatgr         ###   ########.fr        #
+#    Updated: 2019/09/24 20:22:58 by cwheatgr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRCS = ft_bzero ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint \
 	  ft_strclr ft_strcmp ft_strcpy ft_strdel ft_strequ ft_striter ft_strsub \
 	  ft_striteri ft_strjoin ft_strlcat ft_strlen ft_strmap ft_strmapi \
 	  ft_strncat ft_strncmp ft_strncpy ft_strnew ft_strnstr ft_strrchr \
-	  ft_strsplit ft_strstr ft_strtrim ft_tolower ft_toupper
+	  ft_strsplit ft_strstr ft_strtrim ft_tolower ft_toupper ft_strdup \
+	  ft_strnequ
 
 HEADER = libft.h
 
