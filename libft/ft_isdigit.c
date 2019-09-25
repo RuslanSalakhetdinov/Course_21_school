@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:43:30 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/13 13:44:22 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 21:05:57 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int					ft_isdigit(int c)
 {
-	unsigned char	buf;
-
-	buf = (unsigned char)c;
-	if (buf >= '0' && buf <= '9')
+	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
 }

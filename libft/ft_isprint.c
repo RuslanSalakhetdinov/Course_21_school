@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:48:11 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/13 13:48:40 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 21:06:30 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int					ft_isprint(int c)
 {
-	unsigned char	buf;
-
-	buf = (unsigned char)c;
-	if (buf >= 32 && buf <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

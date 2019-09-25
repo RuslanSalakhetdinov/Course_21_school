@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 19:29:43 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/24 20:16:25 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/25 03:05:09 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char		*ft_strdup(const char *s)
 {
 	char	*buf;
-	size_t		len;
+	size_t	len;
 
-len = ft_strlen(s);
+	len = ft_strlen(s);
 	buf = (char*)malloc(sizeof(*buf) * (len + 1));
 	if (!buf)
 		return (NULL);

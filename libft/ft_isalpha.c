@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:32:12 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/20 19:53:08 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 21:06:01 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int					ft_isalpha(int c)
 {
-	unsigned char	buf;
-
-	buf = (unsigned char)c;
-	if ((buf >= 65 && buf <= 90) || (buf >= 97 && buf <= 122))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);
 	return (0);
 }

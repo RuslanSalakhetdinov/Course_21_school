@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 19:36:08 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/23 20:27:52 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/25 07:31:29 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,27 @@ static char	*if_min_int(char *str)
 	return (str);
 }
 
+static int	ft_num_len(int n)
+{
+	int		count;
+
+	count = 0;
+	if (n < 0)
+		count++;
+	while (n / 10)
+	{
+		n /= 10;
+		count++;
+	}
+	count += 2;
+	return (count);
+}
+
 static void	ft_algo_play(int *suff, char **buf, int n)
 {
 	int		i;
 
-	i = 12;
+	i = ft_num_len(n);
 	(*suff) = 1;
 	if (n < 0)
 	{
@@ -56,11 +72,11 @@ char		*ft_itoa(int n)
 	int		i;
 	int		suff;
 
-	buf = (char*)malloc(12 * sizeof(buf));
+	buf = (char*)malloc(ft_num_len(n) * sizeof(*buf));
 	if (buf)
 	{
 		i = -1;
-		while (++i < 12)
+		while (++i < ft_num_len(n))
 			buf[i] = '\0';
 	}
 	else

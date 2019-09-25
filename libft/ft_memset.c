@@ -6,15 +6,15 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 14:48:41 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/11 15:03:22 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 21:44:19 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *b, int c, size_t len)
+void				*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *buf;
+	unsigned char	*buf;
 
 	buf = (unsigned char*)b;
 	while (len--)

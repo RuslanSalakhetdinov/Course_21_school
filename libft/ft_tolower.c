@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:56:44 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/20 20:23:18 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 21:12:09 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int					ft_tolower(int c)
 {
-	unsigned char	buf;
-
-	buf = (unsigned char)c;
-	if (buf >= 'A' && buf <= 'Z')
+	if (c >= 65 && c <= 90)
 		return (c + 32);
 	return (c);
 }

@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:29:00 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/24 19:39:06 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 21:47:03 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	buf = NULL;
 	while (*s)
 	{
-		if(*s == (char)c)
+		if (*s == (char)c)
 			buf = (char *)s;
 		s++;
 	}

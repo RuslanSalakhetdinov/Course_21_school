@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 15:06:54 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/11 15:07:58 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/25 07:10:07 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	if (ft_strcmp((char*)s1, (char*)s2) == 0)
+	if (!s1 || !s2)
 		return (0);
-	return (1);
+	if (ft_strcmp((char*)s1, (char*)s2) == 0)
+		return (1);
+	return (0);
 }

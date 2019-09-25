@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 13:49:03 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/13 13:56:19 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 21:13:12 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int					ft_toupper(int c)
 {
-	unsigned char	buf;
-
-	buf = (unsigned char)c;
-	if (buf >= 'a' && buf <= 'z')
+	if (c >= 97 && c <= 122)
 		return (c - 32);
 	return (c);
 }

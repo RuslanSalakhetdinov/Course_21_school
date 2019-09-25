@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 17:47:14 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/23 23:55:57 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/25 07:00:17 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,10 @@ static void	ft_del_arr(char **arr, int index)
 	int i;
 
 	i = -1;
-	while (++i < (index - 1))
+	while (++i < index)
 		free(arr[i]);
 	free(arr);
+	arr = NULL;
 }
 
 static void	ft_set_word(char **arr, char **s, char c, int index)
@@ -50,7 +51,7 @@ static void	ft_set_word(char **arr, char **s, char c, int index)
 		buf++;
 	(*s) = buf;
 	len = 0;
-	while (*buf != c)
+	while (*buf != c && *buf)
 	{
 		len++;
 		buf++;
@@ -59,13 +60,13 @@ static void	ft_set_word(char **arr, char **s, char c, int index)
 	if (!arr[index])
 		ft_del_arr(arr, index);
 	len = 0;
-	while (*(*s) != c)
+	while (*(*s) != c && *(*s))
 	{
-		arr[len][index] = *(*s);
+		arr[index][len] = *(*s);
 		len++;
 		(*s)++;
 	}
-	arr[len][index] = '\0';
+	arr[index][len] = '\0';
 }
 
 char		**ft_strsplit(char const *s, char c)
@@ -75,9 +76,13 @@ char		**ft_strsplit(char const *s, char c)
 	int		count;
 	int		index;
 
+	if (!s || !c)
+		return (NULL);
 	count = 0;
 	ft_count((char *)s, c, &count);
 	arr = (char**)malloc(sizeof(*arr) * (count + 1));
+	if (!arr)
+		return (NULL);
 	index = -1;
 	buf = (char *)s;
 	while (++index < count)
@@ -86,6 +91,6 @@ char		**ft_strsplit(char const *s, char c)
 		if (!arr)
 			return (NULL);
 	}
-	arr[0][index] = '\0';
+	arr[index] = NULL;
 	return (arr);
 }

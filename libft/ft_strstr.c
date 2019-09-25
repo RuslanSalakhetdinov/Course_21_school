@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 12:37:18 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/24 00:13:30 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/24 23:33:10 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int i;
 	int j;
 
-	if (!needle)
+	if (!*needle)
 		return ((char *)haystack);
 	i = -1;
 	while (haystack[++i])
