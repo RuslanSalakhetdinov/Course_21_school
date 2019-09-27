@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/13 12:35:38 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/26 20:16:17 by cwheatgr         ###   ########.fr       */
+/*   Created: 2019/09/26 20:59:59 by cwheatgr          #+#    #+#             */
+/*   Updated: 2019/09/26 23:04:28 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnstr(const char *haystack, const char *needle, size_t n)
+void	ft_swap(int *a, int *b)
 {
-	size_t	i;
-	size_t	j;
+	int buf;
 
-	if (!*needle)
-		return ((char *)haystack);
-	i = -1;
-	n++;
-	while (haystack[++i] && --n)
-	{
-		j = 0;
-		while (needle[j] == haystack[i + j])
-		{
-			if (!needle[j + 1] && n > j)
-				return ((char *)haystack + i);
-			j++;
-		}
-	}
-	return (NULL);
+	buf = *a;
+	*a = *b;
+	*b = buf;
 }

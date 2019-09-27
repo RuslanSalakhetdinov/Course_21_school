@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strrcapitalize.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/24 19:45:31 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/26 20:44:08 by cwheatgr         ###   ########.fr       */
+/*   Created: 2019/09/26 21:16:17 by cwheatgr          #+#    #+#             */
+/*   Updated: 2019/09/26 21:16:34 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strtrim(char const *s)
+void	ft_strrcapitalize(char *s)
 {
-	char	*buf;
-	int		start;
-	size_t	len;
-
-	if (!s)
-		return (NULL);
-	if (!*s)
-		return (ft_strdup(s));
-	buf = (char*)s;
-	start = 0;
-	while (*buf == ' ' || *buf == '\t' || *buf == '\n')
+	if (s)
 	{
-		buf++;
-		start++;
+		while (*s)
+		{
+			if (*s >= 65 && *s <= 90)
+				*s += 32;
+			s++;
+		}
 	}
-	if (!s[start])
-		return (ft_strdup("\0"));
-	len = ft_strlen(s) - 1;
-	while ((s[len] == ' ' || s[len] == '\t' || s[len] == '\n') && len > 0)
-		len--;
-	return (ft_strsub(s, start, len - start + 1));
 }

@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:22:30 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/24 23:22:03 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/26 21:37:12 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,10 @@ void				ft_putendl(const char *s);
 void				ft_putendl_fd(const char *s, int fd);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+int					ft_istrupper(const char *s);
+int					ft_istrlower(const char *s);
+void				ft_swap(int *a, int *b);
+void				ft_strcapitalize(char *s);
+void				ft_strrcapitalize(char *s);
 
 #endif

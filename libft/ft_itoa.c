@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 19:36:08 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/09/25 07:47:55 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/09/26 20:44:05 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,18 @@ static int	ft_num_len(int n)
 	int		count;
 
 	count = 0;
-	if (n < 0)
+	if (n == 0)
 		count++;
-	while (n / 10)
+	else if (n < 0)
+	{
+		count++;
+		n = n * -1;
+	}
+	while (n > 0)
 	{
 		n /= 10;
 		count++;
 	}
-	count += 2;
 	return (count);
 }
 
@@ -72,7 +76,7 @@ char		*ft_itoa(int n)
 	int		i;
 	int		suff;
 
-	buf = (char*)malloc(ft_num_len(n) * sizeof(*buf));
+	buf = ft_strnew(ft_num_len(n));
 	if (buf)
 	{
 		i = -1;

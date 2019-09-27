@@ -6,7 +6,7 @@
 #    By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/20 20:25:24 by cwheatgr          #+#    #+#              #
-#    Updated: 2019/09/24 20:22:58 by cwheatgr         ###   ########.fr        #
+#    Updated: 2019/09/26 21:41:11 by cwheatgr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,11 +23,17 @@ SRCS = ft_bzero ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint \
 	  ft_strsplit ft_strstr ft_strtrim ft_tolower ft_toupper ft_strdup \
 	  ft_strnequ
 
+MY_SRCS = ft_istrlower ft_istrupper ft_swap ft_strcapitalize ft_strrcapitalize
+
 HEADER = libft.h
 
 C_FILES = $(patsubst %, %.c, $(SRCS))
 
+C_MY_FILES = $(patsubst %, %.c, $(MY_SRCS))
+
 O_FILES = $(patsubst %, %.o, $(SRCS))
+
+O_MY_FILES = $(patsubst %, %.o, $(MY_SRCS))
 
 FLAGS = -Wall -Wextra -Werror -Ofast -c
 
@@ -35,17 +41,17 @@ FLAGS = -Wall -Wextra -Werror -Ofast -c
 
 all: $(NAME)
 
-$(NAME): $(O_FILES) $(HEADER)
-	ar rc $(NAME) $?
-	ranlib $(NAME)
+$(NAME): $(O_FILES) $(O_MY_FILES) $(HEADER)
+	@ar rc $(NAME) $?
+	@ranlib $(NAME)
 
-$(O_FILES): %.o: %.c
-	gcc $(FLAGS) $?
+$(O_FILES) $(O_MY_FILES): %.o: %.c
+	@gcc $(FLAGS) $?
 
 clean:
-	/bin/rm -f $(O_FILES)
+	@/bin/rm -f $(O_FILES) $(O_MY_FILES)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 
 re: fclean all
