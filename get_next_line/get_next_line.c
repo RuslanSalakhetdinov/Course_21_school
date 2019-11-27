@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 20:15:41 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/11/27 17:26:45 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/11/27 19:09:14 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,12 @@ int					make_line(char **str, char **line)
 		free(*str);
 		*str = buf;
 	}
-	elseelse
-			{
-						*line = ft_strdup(*s);
-								ft_strdel(s);
-									}
+	else
+	{
 		*line = ft_strdup(*str);
+		free(*str);
+		str = ft_strnew(0);
+	}
 	return (1);
 }
 
