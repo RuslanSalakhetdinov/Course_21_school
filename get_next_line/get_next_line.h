@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 20:16:59 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/10/21 18:17:18 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/11/27 21:35:16 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,18 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 # include <unistd.h>
-# include "libft.h"
+# include "libft/libft.h"
 
-typedef struct		l_fdlt
+typedef	struct		s_fdlt
 {
 	char			*str;
 	int				fd;
-	struct s_list	*next;
+	struct s_fdlt	*next;
 }					t_fdlt;
+
+t_fdlt				*fdltnew(int fd);
+t_fdlt				*find_list_fd(t_fdlt **main, int fd);
+int					make_line(char **str, char **line);
+int					get_next_line(const int fd, char **line);
 
 #endif
