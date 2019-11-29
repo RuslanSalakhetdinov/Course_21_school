@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 19:45:21 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/11/29 15:13:13 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2019/11/29 15:33:56 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct			s_form //I think, my type is a good idea, kek
 
 //place for prototypes of all functions
 t_form					*form_new(char **f, char type);
+void					form_del(t_form **main);
 
 #endif
 
