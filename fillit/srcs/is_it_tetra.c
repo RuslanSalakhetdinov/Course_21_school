@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   form_del.c                                         :+:      :+:    :+:   */
+/*   is_it_tetra.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/29 15:21:42 by cwheatgr          #+#    #+#             */
-/*   Updated: 2019/11/29 15:33:48 by cwheatgr         ###   ########.fr       */
+/*   Created: 2020/02/10 20:11:32 by cwheatgr          #+#    #+#             */
+/*   Updated: 2020/02/10 20:52:35 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void		form_del(t_form **main)
+int		is_it_tetra(char *buf)
 {
-	t_form	*buf;
-	int		i;
+	int	i;
+	int	count;
 
-	if (*main)
+	i = 0;
+	count = 0;
+	while (i <= 18)
 	{
-		buf = (*main);
-		while (!buf)
+		if (buf[i] == '#')
 		{
-			buf = buf->link;
-			i = -1;
-			while (++i < 5)
-				free(((*main)->f)[i]);
-			free((*main)->f);
-			free((*main));
-			(*main) = buf;
+			if (i - 1 >= 0 && buf[i - 1] == '#')
+				count++;
+			if (i - 5 >= 0 && buf[i - 5] == '#')
+				count++;
+			if (i + 1 <= 18 && buf[i + 1] == '#')
+				count++;
+			if (i + 5 <= 18 && buf[i + 5] == '#')
+				count++;
 		}
+		i++;
 	}
 }

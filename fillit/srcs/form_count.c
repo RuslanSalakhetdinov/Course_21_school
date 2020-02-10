@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   form_new.c                                         :+:      :+:    :+:   */
+/*   form_count.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/29 14:50:29 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/10 15:55:43 by cwheatgr         ###   ########.fr       */
+/*   Created: 2020/02/10 14:32:49 by cwheatgr          #+#    #+#             */
+/*   Updated: 2020/02/10 14:37:41 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-t_form		*form_new(char **buf, char symbol)
+int		form_count(t_form *form)
 {
-	t_form	*new;
-	int		row;
-	int		num;
+int		count;
 
-
-	row = 0;
-	if (!(new = (t_form*)malloc(sizeof(new))))
-		return (NULL);
-	while (num < 20)
+	count = 0;
+	while (form)
 	{
-		if (buf[num] == '#')
-		{
-			new->pos[row][0] = (num >= 5) ? (i % 5) : i;
-			new->pos[row][1] = i / 5;
-			row++;
-		}
-		num++;
+		form = form->next;
+		count++;
 	}
+	return (count);
 }
-new->symbol = symbol;
-new->x_base = 0;
-new->y_base = 0;
-return (form_alignment(new));

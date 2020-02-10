@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   form_new.c                                         :+:      :+:    :+:   */
+/*   solution.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/29 14:50:29 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/10 15:55:43 by cwheatgr         ###   ########.fr       */
+/*   Created: 2020/02/10 10:05:27 by cwheatgr          #+#    #+#             */
+/*   Updated: 2020/02/10 14:43:41 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-t_form		*form_new(char **buf, char symbol)
+void		solution(t_form *form)
 {
-	t_form	*new;
-	int		row;
-	int		num;
+	int		b_size;
+	t_board	*board;
 
-
-	row = 0;
-	if (!(new = (t_form*)malloc(sizeof(new))))
-		return (NULL);
-	while (num < 20)
+	b_size = board_size(form_count(form) * 4);
+	board = board_new(b_size);
+	while (!solve_algorithm(board, form))
 	{
-		if (buf[num] == '#')
-		{
-			new->pos[row][0] = (num >= 5) ? (i % 5) : i;
-			new->pos[row][1] = i / 5;
-			row++;
-		}
-		num++;
+		board_free(board);
+		b_size++;
+		board = board_new(b_size);
 	}
+	board_output(board);
+	board_free(board);
 }
-new->symbol = symbol;
-new->x_base = 0;
-new->y_base = 0;
-return (form_alignment(new));
