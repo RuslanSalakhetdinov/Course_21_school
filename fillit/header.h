@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   header.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 19:45:21 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/11 21:42:55 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/12 18:24:47 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,20 @@ typedef struct			s_board
 		int				size;
 }						t_board;
 //place for prototypes of all functions
-t_form					*form_new(char **f, char type);
-void					form_del(t_form **main);
+t_form					*form_new(char **buf, char symbol);
+int						beyond_borders(t_form *form, int b_size, int flag);
+void					board_free(t_board *board);
+t_board					*board_new(int b_size);
+void					board_output(t_board *board);
+int						board_size(int size);
+void					change_symbols(t_board *board, \
+										t_form *form, char symbol);
+t_form					*form_alignment(t_form *form);
+int						form_count(t_form *form);
+int						if_overlap(t_board *board, t_form *form);
+int						is_it_tetra(char *buf);
+void					solution(t_form *form);
+int						solve_algorithm(t_board *board, t_form *form);
 
 #endif
 
