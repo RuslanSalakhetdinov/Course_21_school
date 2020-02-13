@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 16:36:17 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/12 17:05:29 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/13 18:57:49 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct			s_form
 		void			*win_ptr;
 }						t_form;
 
-t_form		*form_new(int row, int column);
+t_form		*form_new(char *file);
 
 
 
