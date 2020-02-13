@@ -1,40 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   print_img.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 16:36:17 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/13 22:12:45 by cwheatgr         ###   ########.fr       */
+/*   Created: 2020/02/13 21:14:15 by cwheatgr          #+#    #+#             */
+/*   Updated: 2020/02/13 22:44:36 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft/libft.h"
-# include "get_next_line.h"
-# include "mlx.h"
+#include "fdf.h"
 
-typedef struct			s_form
-{
-		int				**depth;
-		int				row;
-		int				col;
-		int				zoom;
-		void			*mlx_ptr;
-		void			*win_ptr;
-}						t_form;
-
-t_form		*form_new(char *file);
-
-
-
-
-
-#endif

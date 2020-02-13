@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   form_new.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 16:56:17 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/13 19:04:49 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/13 21:07:37 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int			count_col(char *line, char symbol)
 	int		count;
 
 	flag = '0';
+	count = 0;
 	while (*line)
 	{
 		if (*line != symbol && flag == '0')
@@ -58,6 +59,7 @@ int			get_col(char *file)
 	fd = open(file, O_RDONLY, 0);
 	get_next_line(fd, &line);
 	col = count_col(line, ' ');
+	free(line);
 	close(fd);
 	return (col);
 }
@@ -73,8 +75,8 @@ void		get_depth(int *depth_line, char *line)
 	{
 		depth_line[i] = ft_atoi(split[i]);
 		free(split[i]);
-
 	}
+	free(split);
 }
 
 t_form		*form_new(char *file)
@@ -82,20 +84,23 @@ t_form		*form_new(char *file)
 	t_form	*buf;
 	int		fd;
 	int		i;
+	char	*line;
 
 	fd = open(file, O_RDONLY, 0);
 	if (!(buf = (t_form*)malloc(sizeof(t_form))))
 		return (NULL);
 	buf->row = get_row(file);
 	buf->col = get_col(file);
-	buf->depth = (int**)malloc(sizeof(int*) * (buf_row + 1));
+	buf->depth = (int**)malloc(sizeof(int*) * (buf->row + 1));
 	i = -1;
-	while (++i <= buf_row + 1)
+	while (++i <= buf->row + 1)
 		buf->depth[i] = (int*)malloc(sizeof(int) * (buf->col +1));
 	i = -1;
-	while (get_next_lline(fd, &line))
+	while (get_next_line(fd, &line))
 	{
 		get_depth(buf->depth[++i], line);
 		free(line);
 	}
+	buf->depth[++i] = NULL;
+	return (buf);
 }

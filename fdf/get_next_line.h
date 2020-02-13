@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 16:36:17 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/13 22:12:45 by cwheatgr         ###   ########.fr       */
+/*   Created: 2019/10/09 21:54:11 by lgunship          #+#    #+#             */
+/*   Updated: 2020/02/13 20:11:08 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft/libft.h"
-# include "get_next_line.h"
-# include "mlx.h"
+#ifndef GET_NEXT_LINE_H
+#define GET_NEXT_LINE_H
 
-typedef struct			s_form
-{
-		int				**depth;
-		int				row;
-		int				col;
-		int				zoom;
-		void			*mlx_ptr;
-		void			*win_ptr;
-}						t_form;
+#include "../libft/libft.h"
 
-t_form		*form_new(char *file);
+#include <fcntl.h>
+#include <unistd.h>
 
-
-
-
+#define BUFF_SIZE	64
+int		check_line(const int fd, char **line, char **str, ssize_t read_bytes);
+int		get_next_line(const int fd, char **line);
 
 #endif
