@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/12 16:47:49 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/18 22:22:25 by cwheatgr         ###   ########.fr       */
+/*   Created: 2020/02/18 19:36:10 by cwheatgr          #+#    #+#             */
+/*   Updated: 2020/02/18 21:02:54 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-int			main(int argc, char **argv)
+void		print_map(t_form *form)
 {
-	t_form	*form;
-	int		i;
-	int		j;
+	int		x;
+	int		y;
 
-	if (argc != 2)
+	y = 0;
+	while (y < form->row)
 	{
-		ft_putstr("error, check your arguments!!!\n");
-		return (0);
+		x = 0;
+		while (x < form->col)
+		{
+			if (x < form->col -1)
+				print_img(x, y, x+1, y, form);
+			if (y < form->row -1)
+				print_img(x, y, x, y+1, form);
+			x++;
+		}
+		y++;
 	}
-	form = form_new(argv[1]);
-	form->zoom = 30;
-	form->shift = 200;
-	form->mlx_ptr = mlx_init();
-	form->win_ptr = mlx_new_window(form->mlx_ptr, 1920, 1080, "MAP");
-	print_map(form);
-	mlx_loop(form->mlx_ptr);
-	return (0);
 }

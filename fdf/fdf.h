@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+	/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
@@ -20,6 +20,13 @@
 # include "libft/libft.h"
 # include "get_next_line.h"
 # include "mlx.h"
+# include <math.h>
+//delete then
+# include <stdio.h>
+
+/*
+** clang *.c libft/libft.a -L/usr/local/lib/ -I/usr/local/include -framework OpenGL -framework AppKit -lmlx
+*/
 
 typedef struct			s_form
 {
@@ -27,12 +34,16 @@ typedef struct			s_form
 		int				row;
 		int				col;
 		int				zoom;
+		int				color;
+		int				shift;
 		void			*mlx_ptr;
 		void			*win_ptr;
 }						t_form;
 
-t_form		*form_new(char *file);
-
+t_form					*form_new(char *file);
+void					print_img(double x, double y, double x1, double y1, t_form *form);
+void					print_map(t_form *form);
+void					isometric(double *x, double *y, int z);
 
 
 
