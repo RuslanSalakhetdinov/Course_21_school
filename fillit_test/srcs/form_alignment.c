@@ -6,7 +6,7 @@
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 15:55:56 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/20 20:37:30 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/24 22:15:32 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ t_form	*form_alignment(t_form *form)
 		form->pos[2][1]--;
 		form->pos[3][1]--;
 	}
-		return (form);
+	return (form);
 }

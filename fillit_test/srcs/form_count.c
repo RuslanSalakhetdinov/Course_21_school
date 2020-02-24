@@ -6,7 +6,7 @@
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 14:32:49 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/20 20:37:30 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/24 22:13:53 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		form_count(t_form *form)
 {
-int		count;
+	int	count;
 
 	count = 0;
 	while (form)

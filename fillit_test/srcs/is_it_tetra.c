@@ -6,7 +6,7 @@
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 20:11:32 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/20 20:37:30 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/24 22:23:40 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,3 @@ int		is_it_tetra(char *buf)
 	}
 	return ((count == 6 || count == 8) && num == 4);
 }
-

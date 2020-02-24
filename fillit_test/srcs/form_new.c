@@ -6,7 +6,7 @@
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 14:50:29 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/20 20:37:30 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/24 22:16:00 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ t_form		*form_new(char *buf, char symbol)
 	t_form	*new;
 	int		row;
 	int		num;
-
 
 	row = 0;
 	num = 0;

@@ -6,7 +6,7 @@
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 21:54:01 by lgunship          #+#    #+#             */
-/*   Updated: 2020/02/20 20:37:30 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/24 22:23:07 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int				get_next_line(const int fd, char **line)
 	ssize_t		read_bytes;
 	char		buffer[BUFF_SIZE + 1];
 	static char	*str[255];
-	char *		temp;
+	char		*temp;
 
 	if ((fd < 0) || (line == NULL))
 		return (-1);
@@ -39,7 +39,8 @@ int				get_next_line(const int fd, char **line)
 	return (check_line(fd, line, str, read_bytes));
 }
 
-int				check_line(const int fd, char **line, char **str, ssize_t read_bytes)
+int				check_line(const int fd, char **line, char **str, \
+		ssize_t read_bytes)
 {
 	int			length;
 	char		*temp;
@@ -50,10 +51,9 @@ int				check_line(const int fd, char **line, char **str, ssize_t read_bytes)
 	if (str[fd][length] == '\n')
 	{
 		*line = ft_strsub(str[fd], 0, length);
-		temp  = ft_strdup(str[fd] + length + 1);
+		temp = ft_strdup(str[fd] + length + 1);
 		free(str[fd]);
 		str[fd] = temp;
-
 		if (*str[fd] == '\0')
 			ft_strdel(&str[fd]);
 	}

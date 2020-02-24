@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lgunship <lgunship@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/13 01:02:53 by lgunship          #+#    #+#             */
-/*   Updated: 2020/02/19 14:34:21 by lgunship         ###   ########.fr       */
+/*   Created: 2020/02/24 22:19:46 by cwheatgr          #+#    #+#             */
+/*   Updated: 2020/02/24 22:52:12 by cwheatgr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/header.h"
 
-char	*get_tetramino(int fd, char *tetraminoshka)
+char		*get_tetramino(int fd, char *tetraminoshka)
 {
 	int		i;
 	char	*temp;
@@ -21,7 +21,7 @@ char	*get_tetramino(int fd, char *tetraminoshka)
 	ft_strclr(tetraminoshka);
 	while (i < 4)
 	{
-		if(get_next_line(fd, &temp) < 1)
+		if (get_next_line(fd, &temp) < 1)
 			return (NULL);
 		temp[4] = 'q';
 		temp[5] = '\0';
@@ -30,14 +30,13 @@ char	*get_tetramino(int fd, char *tetraminoshka)
 		i++;
 		free(temp);
 	}
-	if(get_next_line(fd, &temp))
-		free (temp);
+	if (get_next_line(fd, &temp))
+		free(temp);
 	return (tetraminoshka);
 }
 
-int get_tetraminos_form (int fd)
+int			get_tetraminos_form(int fd, char symbol)
 {
-	char	simbol;
 	char	*temp;
 	char	*tetraminoshka;
 	t_form	*head;
@@ -45,18 +44,18 @@ int get_tetraminos_form (int fd)
 	t_form	*buf2;
 
 	tetraminoshka = (char *)malloc(sizeof(char) * 20);
-	simbol = 'A';
+	symbol = 'A';
 	if (!(temp = get_tetramino(fd, tetraminoshka)))
 		return (-1);
 	if (is_it_tetra(temp) == 0)
 		return (-1);
-	head = form_new(temp, simbol);
+	head = form_new(temp, symbol);
 	buf2 = head;
 	while ((temp = get_tetramino(fd, tetraminoshka)) != NULL)
 	{
 		if (is_it_tetra(temp) == 0 && temp)
 			return (-1);
-		buf = form_new(temp, ++simbol);
+		buf = form_new(temp, ++symbol);
 		buf2->next = buf;
 		buf2 = buf;
 	}
