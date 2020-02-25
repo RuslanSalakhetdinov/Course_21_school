@@ -1,0 +1,34 @@
+Here is the main() test:\n-----------------------------\n#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include "gnl.h"
+
+int				main(void)
+{
+	char		*line = NULL;
+	int			fd = open("./srcs/gnl/gnl10.txt", O_RDONLY);
+
+	get_next_line(fd, &line);
+	close(fd);
+	sleep(15);
+	return (0);
+}\n-----------------------------\n\n\nProcess:         gnl10 [47831]
+Path:            /Users/cwheatgr/42FileChecker/tmp/gnl10
+Load Address:    0x10e112000
+Identifier:      gnl10
+Version:         ???
+Code Type:       X86-64
+Parent Process:  bash [47829]
+
+Date/Time:       2019-11-29 16:17:23.523 +0300
+Launch Time:     2019-11-29 16:17:18.257 +0300
+OS Version:      Mac OS X 10.12.6 (16G2128)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 9.2 (9C40b)
+----
+
+leaks Report Version:  2.0
+Process 47831: 153 nodes malloced for 24 KB
+Process 47831: 0 leaks for 0 total leaked bytes.

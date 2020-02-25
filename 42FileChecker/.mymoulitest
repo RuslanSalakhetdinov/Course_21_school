@@ -1,0 +1,46 @@
+find: /Users/cwheatgr/trash/testgnl/includes: No such file or directory
+find: /Users/cwheatgr/trash/testgnl/srcs: No such file or directory
+make exec_tests
+find: /Users/cwheatgr/trash/testgnl/includes: No such file or directory
+find: /Users/cwheatgr/trash/testgnl/srcs: No such file or directory
+echo "tests/01_test_simple.spec.c tests/02_test_eof_with_close.spec.c tests/03_test_medium_string.spec.c tests/04_test_return_values.spec.c tests/05_test_error_handling.spec.c tests/06_test_line_of_08.spec.c tests/07_test_two_lines_of_08.spec.c tests/08_test_few_lines_of_08.spec.c tests/09_test_line_of_16.spec.c tests/10_test_two_lines_of_16.spec.c tests/11_test_few_lines_of_16.spec.c tests/12_test_line_of_4.spec.c tests/13_test_two_lines_of_4.spec.c tests/14_test_few_lines_of_4.spec.c tests/15_test_line_without_nl.spec.c tests/16_test_line_of_8_without_nl.spec.c tests/17_test_line_of_16_without_nl.spec.c tests/30_bonus_multiple_fd.spec.c tests/40_hard_test_medium_string.spec.c tests/41_hard_test_large_file.spec.c tests/42_hard_test_one_big_fat_line.spec.c"
+tests/01_test_simple.spec.c tests/02_test_eof_with_close.spec.c tests/03_test_medium_string.spec.c tests/04_test_return_values.spec.c tests/05_test_error_handling.spec.c tests/06_test_line_of_08.spec.c tests/07_test_two_lines_of_08.spec.c tests/08_test_few_lines_of_08.spec.c tests/09_test_line_of_16.spec.c tests/10_test_two_lines_of_16.spec.c tests/11_test_few_lines_of_16.spec.c tests/12_test_line_of_4.spec.c tests/13_test_two_lines_of_4.spec.c tests/14_test_few_lines_of_4.spec.c tests/15_test_line_without_nl.spec.c tests/16_test_line_of_8_without_nl.spec.c tests/17_test_line_of_16_without_nl.spec.c tests/30_bonus_multiple_fd.spec.c tests/40_hard_test_medium_string.spec.c tests/41_hard_test_large_file.spec.c tests/42_hard_test_one_big_fat_line.spec.c
+make re -k -C /Users/cwheatgr/trash/testgnl/libft
+make -k -C ../testframework/v3/
+rm -f *.o
+cc -Wall -Werror -Wextra -ggdb -I includes -c srcs/**/*.c
+ar rc libmt_framework.a *.o
+cc -g -I . -I ../testframework/v3//includes -I /Users/cwheatgr/trash/testgnl -I /Users/cwheatgr/trash/testgnl/includes -I /Users/cwheatgr/trash/testgnl/includes/builtin -I /Users/cwheatgr/trash/testgnl/libs/libtowel/includes -I /Users/cwheatgr/trash/testgnl/libft/includes -I /Users/cwheatgr/trash/testgnl/srcs/libft/includes -D__MOULITEST__ -DPROTOTYPES="MT_ADD_PROTO(01_test_simple); MT_ADD_PROTO(02_test_eof_with_close); MT_ADD_PROTO(03_test_medium_string); MT_ADD_PROTO(04_test_return_values); MT_ADD_PROTO(05_test_error_handling); MT_ADD_PROTO(06_test_line_of_08); MT_ADD_PROTO(07_test_two_lines_of_08); MT_ADD_PROTO(08_test_few_lines_of_08); MT_ADD_PROTO(09_test_line_of_16); MT_ADD_PROTO(10_test_two_lines_of_16); MT_ADD_PROTO(11_test_few_lines_of_16); MT_ADD_PROTO(12_test_line_of_4); MT_ADD_PROTO(13_test_two_lines_of_4); MT_ADD_PROTO(14_test_few_lines_of_4); MT_ADD_PROTO(15_test_line_without_nl); MT_ADD_PROTO(16_test_line_of_8_without_nl); MT_ADD_PROTO(17_test_line_of_16_without_nl); MT_ADD_PROTO(30_bonus_multiple_fd); MT_ADD_PROTO(40_hard_test_medium_string); MT_ADD_PROTO(41_hard_test_large_file); MT_ADD_PROTO(42_hard_test_one_big_fat_line); " -DADD_TESTS="MT_ADD_SUITE(mt, 01_test_simple, suite_01_test_simple); MT_ADD_SUITE(mt, 02_test_eof_with_close, suite_02_test_eof_with_close); MT_ADD_SUITE(mt, 03_test_medium_string, suite_03_test_medium_string); MT_ADD_SUITE(mt, 04_test_return_values, suite_04_test_return_values); MT_ADD_SUITE(mt, 05_test_error_handling, suite_05_test_error_handling); MT_ADD_SUITE(mt, 06_test_line_of_08, suite_06_test_line_of_08); MT_ADD_SUITE(mt, 07_test_two_lines_of_08, suite_07_test_two_lines_of_08); MT_ADD_SUITE(mt, 08_test_few_lines_of_08, suite_08_test_few_lines_of_08); MT_ADD_SUITE(mt, 09_test_line_of_16, suite_09_test_line_of_16); MT_ADD_SUITE(mt, 10_test_two_lines_of_16, suite_10_test_two_lines_of_16); MT_ADD_SUITE(mt, 11_test_few_lines_of_16, suite_11_test_few_lines_of_16); MT_ADD_SUITE(mt, 12_test_line_of_4, suite_12_test_line_of_4); MT_ADD_SUITE(mt, 13_test_two_lines_of_4, suite_13_test_two_lines_of_4); MT_ADD_SUITE(mt, 14_test_few_lines_of_4, suite_14_test_few_lines_of_4); MT_ADD_SUITE(mt, 15_test_line_without_nl, suite_15_test_line_without_nl); MT_ADD_SUITE(mt, 16_test_line_of_8_without_nl, suite_16_test_line_of_8_without_nl); MT_ADD_SUITE(mt, 17_test_line_of_16_without_nl, suite_17_test_line_of_16_without_nl); MT_ADD_SUITE(mt, 30_bonus_multiple_fd, suite_30_bonus_multiple_fd); MT_ADD_SUITE(mt, 40_hard_test_medium_string, suite_40_hard_test_medium_string); MT_ADD_SUITE(mt, 41_hard_test_large_file, suite_41_hard_test_large_file); MT_ADD_SUITE(mt, 42_hard_test_one_big_fat_line, suite_42_hard_test_one_big_fat_line); " -DRENDU_PATH="\"/Users/cwheatgr/trash/testgnl\"" tests/01_test_simple.spec.c tests/02_test_eof_with_close.spec.c tests/03_test_medium_string.spec.c tests/04_test_return_values.spec.c tests/05_test_error_handling.spec.c tests/06_test_line_of_08.spec.c tests/07_test_two_lines_of_08.spec.c tests/08_test_few_lines_of_08.spec.c tests/09_test_line_of_16.spec.c tests/10_test_two_lines_of_16.spec.c tests/11_test_few_lines_of_16.spec.c tests/12_test_line_of_4.spec.c tests/13_test_two_lines_of_4.spec.c tests/14_test_few_lines_of_4.spec.c tests/15_test_line_without_nl.spec.c tests/16_test_line_of_8_without_nl.spec.c tests/17_test_line_of_16_without_nl.spec.c tests/30_bonus_multiple_fd.spec.c tests/40_hard_test_medium_string.spec.c tests/41_hard_test_large_file.spec.c tests/42_hard_test_one_big_fat_line.spec.c main.c utils.c /Users/cwheatgr/trash/testgnl/get_next_line.c  -o get_next_line_tests -L../testframework/v3/ -lmt_framework -lft -L /Users/cwheatgr/trash/testgnl/libft
+/Users/cwheatgr/42FileChecker/moulitest_42projects/get_next_line_tests/get_next_line_tests
+
+--
+
+>>>> Tests for get_next_line
+Source: github.com/yyang42/moulitest
+Legend: (.) Ok / (F) Fail / (S) Segfault / (B) Bus error / (T) Timeout / (A) Abort
+
+[ -------STARTING ALL UNIT TESTS------- ]
+>>>> 01_test_simple.spec.c ------- [Ok !] .
+>>>> 02_test_eof_with_close.spec.c [Ok !] .
+>>>> 03_test_medium_string.spec.c  [Ok !] .
+>>>> 04_test_return_values.spec.c  [Ok !] .
+>>>> 05_test_error_handling.spec.c [Ok !] .
+>>>> 06_test_line_of_08.spec.c --- [Ok !] .
+>>>> 07_test_two_lines_of_08.spec. [Ok !] .
+>>>> 08_test_few_lines_of_08.spec. [Ok !] .
+>>>> 09_test_line_of_16.spec.c --- [Ok !] .
+>>>> 10_test_two_lines_of_16.spec. [Ok !] .
+>>>> 11_test_few_lines_of_16.spec. [Ok !] .
+>>>> 12_test_line_of_4.spec.c ---- [Ok !] .
+>>>> 13_test_two_lines_of_4.spec.c [Ok !] .
+>>>> 14_test_few_lines_of_4.spec.c [Ok !] .
+>>>> 15_test_line_without_nl.spec. [Ok !] .
+>>>> 16_test_line_of_8_without_nl. [Ok !] .
+>>>> 17_test_line_of_16_without_nl [Ok !] .
+>>>> 30_bonus_multiple_fd.spec.c - [Ok !] .
+>>>> 40_hard_test_medium_string.sp [Ok !] .
+>>>> 41_hard_test_large_file.spec. [Ok !] .
+>>>> 42_hard_test_one_big_fat_line [Ok !] .
+[ ----------END OF UNIT TESTS---------- ]
+
+>>>> Result: 21/21 test suites passed. 21/21 tests passed (dots).

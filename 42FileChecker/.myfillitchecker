@@ -1,0 +1,93 @@
+fillit_checker by agadhgad
+rm -rf ./obj/
+[Information:] Object_folder_was_removed
+rm -rf fillit
+[Information:] Exe_file_was_removed
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/beyond_borders.o -c srcs/beyond_borders.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/board_free.o -c srcs/board_free.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/board_new.o -c srcs/board_new.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/board_output.o -c srcs/board_output.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/board_size.o -c srcs/board_size.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/change_symbols.o -c srcs/change_symbols.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/form_alignment.o -c srcs/form_alignment.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/form_count.o -c srcs/form_count.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/form_new.o -c srcs/form_new.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/if_overlap.o -c srcs/if_overlap.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/is_it_tetra.o -c srcs/is_it_tetra.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/solution.o -c srcs/solution.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/solve_algorithm.o -c srcs/solve_algorithm.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/parser.o -c srcs/parser.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/get_next_line.o -c srcs/get_next_line.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/read_and_check.o -c srcs/read_and_check.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/form_free.o -c srcs/form_free.c
+gcc -Wall -Wextra -Werror -I./includes/ -o obj/main.o -c srcs/main.c
+[Information:] fillit_was_created
+--- begin of invalid test ---
+invalid test 0 : ok
+invalid test 1 : ok
+invalid test 2 : ok
+invalid test 3 : ok
+invalid test 4 : ok
+invalid test 5 : ok
+invalid test 6 : ok
+invalid test 7 : ok
+invalid test 8 : ok
+invalid test 9 : ok
+invalid test 10 : ok
+invalid test 11 : ok
+invalid test 12 : ok
+invalid test 13 : ok
+invalid test 14 : ok
+invalid test 15 : ok
+invalid test 16 : ok
+invalid test 17 : ok
+invalid test 18 : ok
+invalid test 19 : ok
+invalid test 20 : ok
+invalid test 21 : ok
+invalid test 22 : ok
+invalid test 23 : ok
+invalid test 24 : ok
+invalid test 25 : ok
+--- end of invalid test ---
+invalid test succeed, 26 / 26
+--- begin of valid test ---
+valid test 0 : ok
+valid test 1 : ok
+valid test 2 : ok
+valid test 3 : ok
+valid test 4 : ok
+valid test 5 : ok
+valid test 6 : ok
+valid test 7 : ok
+valid test 8 : ok
+valid test 9 : ok
+valid test 10 : ok
+valid test 11 : ok
+valid test 12 : ok
+valid test 13 : ok
+valid test 14 : ok
+valid test 15 : ok
+valid test 16 : ok
+valid test 17 : ok
+valid test 18 : ok
+valid test 19 : ok
+--- end of valid test ---
+valid test succeed, 20 / 20
+BONUS : 
+AA
+AA
+
+real	0m0.004s
+user	0m0.001s
+sys	0m0.001s
+AA..B
+.A.BB
+.ACCB
+...C.
+...C.
+
+real	0m0.004s
+user	0m0.001s
+sys	0m0.001s
+NOTE: 48/48

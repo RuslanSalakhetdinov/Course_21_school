@@ -1,0 +1,170 @@
+42FILECHECKER INFO:
+
+Here is the full standard output of the libft-unit-test running with your libft.
+See also the clean logfile provided by the library at the following path:
+/Users/cwheatgr/42FileChecker/libft-unit-test/result.log
+
+
+
+------------------------------------------------
+
+
+
+ make re -C /Users/cwheatgr/trash/libe 
+[  Cleaning #0  ]
+âM-^^¤  rm -f obj/src/main.o obj/src/test_functions.o obj/src/display_test_result.o obj/src/signal.o obj/src/sandbox.o obj/src/bench_functions.o obj/src/additional_functions.o obj/hardcore-mode/hardcore-main.o obj/hardcore-mode/error.o obj/hardcore-mode/ncurses-display.o obj/hardcore-mode/test-init.o obj/hardcore-mode/test-utils.o obj/hardcore-mode/test-strcpy.o obj/hardcore-mode/test-strcmp.o obj/hardcore-mode/test-strncmp.o obj/hardcore-mode/test-memset.o obj/hardcore-mode/test-memcpy.o obj/hardcore-mode/test-memccpy.o obj/hardcore-mode/test-memmove.o obj/hardcore-mode/test-memchr.o obj/hardcore-mode/test-memcmp.o obj/hardcore-mode/test-strlen.o obj/hardcore-mode/test-strncpy.o obj/hardcore-mode/test-strcat.o obj/hardcore-mode/test-strncat.o obj/hardcore-mode/test-strchr.o obj/hardcore-mode/test-strrchr.o obj/hardcore-mode/test-strstr.o 
+âM-^^¤  rm -f libft.so assets/libft.a assetslibtests assets/malloc.dylib 
+âM-^^¤  rm -f run_test 
+ make -j 3 -C /Users/cwheatgr/trash/libe 
+make[1]: Nothing to be done for `all'.
+ cp /Users/cwheatgr/trash/libe/libft.a assets/ 
+âM-^^¤  clang -shared -fPIC assets/tmp/ft_atoi.o assets/tmp/ft_bzero.o assets/tmp/ft_isalnum.o assets/tmp/ft_isalpha.o assets/tmp/ft_isascii.o assets/tmp/ft_isdigit.o assets/tmp/ft_isprint.o assets/tmp/ft_istrlower.o assets/tmp/ft_istrupper.o assets/tmp/ft_itoa.o assets/tmp/ft_lstadd.o assets/tmp/ft_lstdel.o assets/tmp/ft_lstdelone.o assets/tmp/ft_lstiter.o assets/tmp/ft_lstmap.o assets/tmp/ft_lstnew.o assets/tmp/ft_memalloc.o assets/tmp/ft_memccpy.o assets/tmp/ft_memchr.o assets/tmp/ft_memcmp.o assets/tmp/ft_memcpy.o assets/tmp/ft_memdel.o assets/tmp/ft_memmove.o assets/tmp/ft_memset.o assets/tmp/ft_putchar.o assets/tmp/ft_putchar_fd.o assets/tmp/ft_putendl.o assets/tmp/ft_putendl_fd.o assets/tmp/ft_putnbr.o assets/tmp/ft_putnbr_fd.o assets/tmp/ft_putstr.o assets/tmp/ft_putstr_fd.o assets/tmp/ft_strcapitalize.o assets/tmp/ft_strcat.o assets/tmp/ft_strchr.o assets/tmp/ft_strclr.o assets/tmp/ft_strcmp.o assets/tmp/ft_strcpy.o assets/tmp/ft_strdel.o assets/tmp/ft_strdup.o assets/tmp/ft_strequ.o assets/tmp/ft_striter.o assets/tmp/ft_striteri.o assets/tmp/ft_strjoin.o assets/tmp/ft_strlcat.o assets/tmp/ft_strlen.o assets/tmp/ft_strmap.o assets/tmp/ft_strmapi.o assets/tmp/ft_strncat.o assets/tmp/ft_strncmp.o assets/tmp/ft_strncpy.o assets/tmp/ft_strnequ.o assets/tmp/ft_strnew.o assets/tmp/ft_strnstr.o assets/tmp/ft_strrcapitalize.o assets/tmp/ft_strrchr.o assets/tmp/ft_strsplit.o assets/tmp/ft_strstr.o assets/tmp/ft_strsub.o assets/tmp/ft_strtrim.o assets/tmp/ft_swap.o assets/tmp/ft_tolower.o assets/tmp/ft_toupper.o -o libft.so 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/main.o -c src/main.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/test_functions.o -c src/test_functions.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/display_test_result.o -c src/display_test_result.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/signal.o -c src/signal.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/sandbox.o -c src/sandbox.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/bench_functions.o -c src/bench_functions.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/src/additional_functions.o -c src/additional_functions.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/hardcore-main.o -c hardcore-mode/hardcore-main.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/error.o -c hardcore-mode/error.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/ncurses-display.o -c hardcore-mode/ncurses-display.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-init.o -c hardcore-mode/test-init.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-utils.o -c hardcore-mode/test-utils.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strcpy.o -c hardcore-mode/test-strcpy.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strcmp.o -c hardcore-mode/test-strcmp.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strncmp.o -c hardcore-mode/test-strncmp.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memset.o -c hardcore-mode/test-memset.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memcpy.o -c hardcore-mode/test-memcpy.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memccpy.o -c hardcore-mode/test-memccpy.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memmove.o -c hardcore-mode/test-memmove.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memchr.o -c hardcore-mode/test-memchr.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-memcmp.o -c hardcore-mode/test-memcmp.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strlen.o -c hardcore-mode/test-strlen.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strncpy.o -c hardcore-mode/test-strncpy.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strcat.o -c hardcore-mode/test-strcat.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strncat.o -c hardcore-mode/test-strncat.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strchr.o -c hardcore-mode/test-strchr.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strrchr.o -c hardcore-mode/test-strrchr.c 
+[  Building #0  ]
+âM-^^¤  clang -O2 -funroll-loops -Werror -Wall -Wextra -I./include -o obj/hardcore-mode/test-strstr.o -c hardcore-mode/test-strstr.c 
+[  Linking #0  ]
+âM-^^¤  clang -Werror -Wall -Wextra -O2 -funroll-loops -lncurses -o assets/libtests obj/src/main.o obj/src/test_functions.o obj/src/display_test_result.o obj/src/signal.o obj/src/sandbox.o obj/src/bench_functions.o obj/src/additional_functions.o obj/hardcore-mode/hardcore-main.o obj/hardcore-mode/error.o obj/hardcore-mode/ncurses-display.o obj/hardcore-mode/test-init.o obj/hardcore-mode/test-utils.o obj/hardcore-mode/test-strcpy.o obj/hardcore-mode/test-strcmp.o obj/hardcore-mode/test-strncmp.o obj/hardcore-mode/test-memset.o obj/hardcore-mode/test-memcpy.o obj/hardcore-mode/test-memccpy.o obj/hardcore-mode/test-memmove.o obj/hardcore-mode/test-memchr.o obj/hardcore-mode/test-memcmp.o obj/hardcore-mode/test-strlen.o obj/hardcore-mode/test-strncpy.o obj/hardcore-mode/test-strcat.o obj/hardcore-mode/test-strncat.o obj/hardcore-mode/test-strchr.o obj/hardcore-mode/test-strrchr.o obj/hardcore-mode/test-strstr.o
+ clang -Werror -Wall -Wextra -dynamiclib assets/malloc.c -I ./include -o assets/malloc.dylib 
+ clang -Werror -Wall -Wextra assets/wrapper.c -I ./include -o run_test 
+RUNING TESTS:
+                      First part
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+     "-.-"     "-.-"     "-.-"     "-.-"     "-.-"    
+ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_bzero:      [OK] [OK] [OK] [OK] 
+ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memccpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strdup:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strncpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strcat:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strncat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strlcat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strstr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strnstr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_isalpha:    [OK] 
+ft_isdigit:    [OK] 
+ft_isalnum:    [OK] 
+ft_isascii:    [OK] 
+ft_isprint:    [OK] 
+ft_toupper:    [OK] 
+ft_tolower:    [OK] 
+
+In this part, you can choose to protect your function or not to,
+a color code will tell you if your function is protected/not BUT stay coherent !
+[ðM-^_M-^[¡ ] --> protected
+[ðM-^_M-^R¥ ] --> not protected
+                     Second part
+ __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)
+(______)(______)(______)(______)(______)(______)(______)(___
+
+ft_memalloc:   [OK] [OK] [OK] [OK] [OK] 
+ft_memdel:     [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_strnew:     [OK] [OK] [OK] [OK] 
+ft_strdel:     [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strclr:     [OK] [ðM-^_M-^[¡ ] 
+ft_striter:    [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_striteri:   [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strmap:     [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strmapi:    [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strequ:     [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strnequ:    [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strsub:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strjoin:    [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strtrim:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strsplit:   [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_itoa:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_putchar:    [OK] [OK] [KO] 
+[KO]: your putchar does not work with unicode
+
+ft_putstr:     [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_putendl:    [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_putnbr:     [OK] [OK] [OK] [OK] [OK] 
+ft_putchar_fd: [OK] [OK] [KO] 
+[KO]: your putchar_fd does not work with unicode
+
+ft_putstr_fd:  [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_putendl_fd: [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_putnbr_fd:  [OK] [OK] [OK] [OK] [OK] 
+
+ /~~~\/~~\/~~~\/~~~\/~~\/~~~\                    /~~~\/~~\/~~~\/~~~\/~~\/~~~\
+ | /\/ /\/ /\ || /\/ /\/ /\ |                    | /\ \/\ \/\ || /\ \/\ \/\ |
+  \ \/ /\/ /\/ /\ \/ /\/ /\/ /     Bonus part     \ \/\ \/\ \/ /\ \/\ \/\ \/ /
+   \ \/\ \/\ \/  \ \/\ \/\ \/                      \/ /\/ /\/ /  \/ /\/ /\/ /
+,_/\ \/\ \/\ \__/\ \/\ \/\ \______________________/ /\/ /\/ /\__/ /\/ /\/ /\_,
+(__/\__/\__/\____/\__/\__/\________________________/\__/\__/\____/\__/\__/\__)
+
+ft_lstnew:     [OK] [OK] [OK] [OK] 
+ft_lstdelone:  [OK] 
+ft_lstdel:     [OK] [OK] [OK] 
+ft_lstadd:     [OK] [OK] [OK] 
+ft_lstiter:    [OK] [ðM-^_M-^[¡ ] 
+ft_lstmap:     [OK] [ðM-^_M-^[¡ ] dyld: warning: could not load inserted library './assets/malloc.dylib' into library validated process because no suitable image found.  Did find:
+	./assets/malloc.dylib: code signing blocked mmap() of './assets/malloc.dylib'
+
+
+âM-^Z  : your libft is using forbidden functions so the result may not be relevant !
+
+See result.log for more informations !
