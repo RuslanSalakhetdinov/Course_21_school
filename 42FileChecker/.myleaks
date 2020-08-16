@@ -1,34 +1,65 @@
-Here is the main() test:\n-----------------------------\n#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include "gnl.h"
+Here is the main() test:
+-----------------------------
+#include <string.h>
+
+int				ft_printf(char const *str, ...);
 
 int				main(void)
 {
-	char		*line = NULL;
-	int			fd = open("./srcs/gnl/gnl10.txt", O_RDONLY);
+  ft_printf("\n");
+  ft_printf("%%\n");
+  ft_printf("%d\n", 42);
+  ft_printf("%d%d\n", 42, 41);
+  ft_printf("%d%d%d\n", 42, 43, 44);
+  ft_printf("%ld\n", 2147483647);
+  ft_printf("%lld\n", 9223372036854775807);
+  ft_printf("%x\n", 505);
+  ft_printf("%X\n", 505);
+  ft_printf("%p\n", &ft_printf);
+  ft_printf("%20.15d\n", 54321);
+  ft_printf("%-10d\n", 3);
+  ft_printf("% d\n", 3);
+  ft_printf("%+d\n", 3);
+  ft_printf("%010d\n", 1);
+  ft_printf("%hhd\n", 0);
+  ft_printf("%jd\n", 9223372036854775807);
+  ft_printf("%zd\n", 4294967295);
+  ft_printf("%\n");
+  ft_printf("%U\n", 4294967295);
+  ft_printf("%u\n", 4294967295);
+  ft_printf("%o\n", 40);
+  ft_printf("%%#08x\n", 42);
+  ft_printf("%x\n", 1000);
+  ft_printf("%#X\n", 1000);
+  ft_printf("%s\n", NULL);
+  ft_printf("%S\n", L"ݗݜशব");
+  ft_printf("%s%s\n", "test", "test");
+  ft_printf("%s%s%s\n", "test", "test", "test");
+  ft_printf("%C\n", 15000);
+  while (1);
+  return (0);
+}
+-----------------------------
 
-	get_next_line(fd, &line);
-	close(fd);
-	sleep(15);
-	return (0);
-}\n-----------------------------\n\n\nProcess:         gnl10 [47831]
-Path:            /Users/cwheatgr/42FileChecker/tmp/gnl10
-Load Address:    0x10e112000
-Identifier:      gnl10
+
+Process:         ft_printf_leaks [49051]
+Path:            /Users/USER/Desktop/*/ft_printf_leaks
+Load Address:    0x109d61000
+Identifier:      ft_printf_leaks
 Version:         ???
 Code Type:       X86-64
-Parent Process:  bash [47829]
+Parent Process:  bash [49049]
 
-Date/Time:       2019-11-29 16:17:23.523 +0300
-Launch Time:     2019-11-29 16:17:18.257 +0300
-OS Version:      Mac OS X 10.12.6 (16G2128)
+Date/Time:       2020-08-16 13:33:04.149 +0300
+Launch Time:     2020-08-16 13:32:59.060 +0300
+OS Version:      Mac OS X 10.15.6 (19G73)
 Report Version:  7
-Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
-Analysis Tool Version:  Xcode 9.2 (9C40b)
+Analysis Tool:   /usr/bin/leaks
+
+Physical footprint:         320K
+Physical footprint (peak):  320K
 ----
 
-leaks Report Version:  2.0
-Process 47831: 153 nodes malloced for 24 KB
-Process 47831: 0 leaks for 0 total leaked bytes.
+leaks Report Version: 4.0
+Process 49051: 155 nodes malloced for 8 KB
+Process 49051: 0 leaks for 0 total leaked bytes.

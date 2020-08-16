@@ -1,0 +1,20 @@
+Your program is compared with the original 'printf'.
+
+How it works:
+Both programs are executed one at a time with the same options so that time needed for execution is greater than 10 seconds.
+During 10 seconds, the stdout of each program is saved in a temporary file and then the lines are counted.
+The rate is calculated by comparing both line counts.
+
+Warning: Your program must work perfectly (the same stdout from the original program) and you should perform your own test with a greater interval of time.
+
+-----------------
+
+# Your program:
+./tmp/ft_printf_speedtest null
+--> 566054 lines written on stdout
+
+# Original program:
+./tmp/printf_speedtest null
+--> 3688025 lines written on stdout
+
+Estimated speed rate:  15%
